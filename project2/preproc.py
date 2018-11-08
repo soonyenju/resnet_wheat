@@ -6,11 +6,10 @@ import os.path
 import glob
 from torchvision import transforms
 from pathlib import Path
-import shutil
 
 
 class DataPrep(torch.utils.data.Dataset):
-    def __init__(self, root, transform, train=True):
+    def __init__(self, root, transform=None, train=True):
         self.root = root
         self.train = train
     
@@ -32,6 +31,9 @@ def main():
     # https://blog.csdn.net/woshicao11/article/details/78318156
     # https://blog.csdn.net/renelian1572/article/details/78761278
     paver(r"D: \workspace\OnProjects\resnet_wheat\project2\Daata")
+
+def read_tif(parameter_list):
+    pass    
 
 def paver(user_data_dir):
     log_dir   = Path.cwd().joinpath("log")
