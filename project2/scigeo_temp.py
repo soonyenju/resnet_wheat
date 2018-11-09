@@ -3,6 +3,7 @@ import rasterio
 import rasterio.features
 import warnings
 from rasterio.transform import Affine
+from pathlib import Path
 
 
 class Raster(object):
@@ -34,9 +35,17 @@ class Raster(object):
 		print(dataset.meta)
 		print(dataset.affine)
 
+	def get_dataset(self):
+		pass
+
+	def get_metadata(self):
+		pass
 
 def main():
-	raster = Raster('test.tif')
+	path = Path("./data/test")
+	for p in path.glob("*.tif"):
+		print(p)
+	raster = Raster(p.as_posix())
 	raster.read()
 
 
