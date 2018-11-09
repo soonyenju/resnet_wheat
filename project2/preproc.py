@@ -27,6 +27,7 @@ class DataPrep(torch.utils.data.Dataset):
 
 
 def main():
+    # https://github.com/jwyang/faster-rcnn.pytorch/
     # https://blog.csdn.net/woshicao11/article/details/82055449
     # https://blog.csdn.net/woshicao11/article/details/78318156
     # https://blog.csdn.net/renelian1572/article/details/78761278
