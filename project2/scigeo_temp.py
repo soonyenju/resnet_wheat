@@ -40,13 +40,20 @@ class Raster(object):
 
 	def get_metadata(self):
 		pass
+	
+	def test_function(self):
+		with rasterio.open(self.path) as src:
+			bands = src.count
+			print(bands)
+			r = src.read()
+			print(r.shape)
 
 def main():
 	path = Path("./data/test")
 	for p in path.glob("*.tif"):
 		print(p)
 	raster = Raster(p.as_posix())
-	raster.read()
+	raster.test_function()
 
 
 if __name__ == '__main__':
