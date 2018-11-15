@@ -34,7 +34,7 @@ def main():
     paver(r"D: \workspace\OnProjects\resnet_wheat\project2\Daata")
 
 def read_tif(parameter_list):
-    pass    
+    pass
 
 def paver(user_data_dir):
     log_dir   = Path.cwd().joinpath("log")
